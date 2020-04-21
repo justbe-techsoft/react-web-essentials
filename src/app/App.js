@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { HomeComponent } from './home/home-component';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ProfileDashboard } from './profile-dashboard/ProfileDashboard'
+import ProfileDashboard from './profile-dashboard/ProfileDashboard'
 import {
   BrowserRouter as Router,
   Switch,

@@ -1,12 +1,29 @@
 import React from 'react';
 
 import { Button, Tabs, Tab, ButtonGroup } from 'react-bootstrap'
+import { connect } from 'react-redux';
+import { incrementCount, decrementCount, } from '../redux/alpha'
 
 
 
+const mapStateToProps = (state) => {
+    return { count: state.alpha.count }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increamentCount: () => {
+            dispatch(incrementCount(1))
+        },
+        decrementCount: () => {
+            dispatch(decrementCount(1))
+        }
+    }
+}
 
 
-export const ProfileDashboard = () => {
+
+const ProfileDashboard = (props) => {
     return (
         <div style={{ margin: '10%' }}>
             <Tabs defaultActiveKey="myEvents" id="uncontrolled-tab-example">
@@ -20,8 +37,9 @@ export const ProfileDashboard = () => {
                     </div>
                     <div style={{ margin: '10%', textAlign: 'center' }}>
                         <ButtonGroup aria-label="Basic example">
-                            <Button variant="secondary">INCREMENT</Button>
-                            <Button variant="secondary">DECREMENT</Button>
+                            <Button variant="secondary">{props.count}</Button>
+                            <Button variant="secondary" onClick={props.increamentCount}>INCREMENT</Button>
+                            <Button variant="secondary" onClick={props.decrementCount}>DECREMENT</Button>
                         </ButtonGroup>
                     </div>
                 </Tab>
@@ -38,3 +56,5 @@ export const ProfileDashboard = () => {
         </div>
     )
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileDashboard);
