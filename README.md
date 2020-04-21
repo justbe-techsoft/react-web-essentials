@@ -9,8 +9,17 @@ STATE MANAGEMENT
 - npm i redux
 - npm install react-redux
 
+- REDUX MIDDLEWARES
+	npm i redux-thunk
+	npm i redux-logger
+
 ROUTER
-npm install react-router-dom
+- npm install react-router-dom
+
+UI COMPONENTS
+- https://react-bootstrap.github.io/
+- npm i bootstrap
+- npm install react-bootstrap 
 
 
 RESOURCES
@@ -23,6 +32,9 @@ BEST GUIDE FOUND FOR FOLDER STRUCTURE
 - https://levelup.gitconnected.com/structure-your-react-redux-project-for-scalability-and-maintainability-618ad82e32b7
 
 - https://www.freecodecamp.org/news/scaling-your-redux-app-with-ducks-6115955638be/
+
+
+
 
 
 

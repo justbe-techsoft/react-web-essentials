@@ -1,4 +1,5 @@
 import React from 'react';
+import { Tabs, Tab, ButtonGroup, Button } from 'react-bootstrap'
 
 
 
@@ -7,8 +8,17 @@ import React from 'react';
 
 export const HomeComponent = () => {
     return (
-        <div>
-            <h1>THIS IS HOME HomeComponent</h1>
-        </div>
+        <Tabs defaultActiveKey="myEvents" id="uncontrolled-tab-example">
+            <Tab eventKey="myEvents" title="MY EVENTS">
+                <ButtonGroup aria-label="Basic example">
+                    <Button variant="secondary">Left</Button>
+                    <Button variant="secondary">Middle</Button>
+                    <Button variant="secondary">Right</Button>
+                </ButtonGroup>
+            </Tab>
+            <Tab eventKey="all" title="ALL">
+                <h1>RAHUL</h1>
+            </Tab>
+        </Tabs>
     )
 }
