@@ -35,7 +35,8 @@ BEST GUIDE FOUND FOR FOLDER STRUCTURE
 
 
 
-
+FIREBASE INTEGRATION -
+Follow https://css-tricks.com/building-a-real-time-chat-app-with-react-and-firebase/
 
 
 
